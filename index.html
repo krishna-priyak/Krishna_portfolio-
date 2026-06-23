@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Krishna Priya K - Computer Science Engineering Student & Aspiring Cybersecurity Professional. Explore projects in Web Development, Software Engineering, AI, and secure applications.">
+    <meta name="keywords" content="Krishna Priya K, Computer Science Engineering, Portfolio, Cybersecurity, Web Development, Software Engineer, B.Tech CSE, Sreekrishnapuram">
+    <meta name="author" content="Krishna Priya K">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Krishna Priya K | Computer Science Engineering Student">
+    <meta property="og:description" content="Computer Science Engineering student focused on Cybersecurity, Software Development, and AI-driven solutions. Check out my projects, skills, and hackathon achievements.">
+    <meta property="og:url" content="https://github.com/krishna-priyak">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Krishna Priya K | Computer Science Engineering Student">
+    <meta property="twitter:description" content="Computer Science Engineering student focused on Cybersecurity, Software Development, and AI-driven solutions.">
+
+    <title>Krishna Priya K | CSE Student & Aspiring Cybersecurity Professional</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@0.470.0/dist/umd/lucide.min.js"></script>
+
+    <!-- CSS stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Canvas Particle Background -->
+    <canvas id="particle-canvas"></canvas>
+
+    <!-- Professional Loading Screen -->
+    <div id="preloader">
+        <div class="loader-content">
+            <div class="loader-logo">
+                <span class="gold-text">&lt;</span>KP<span class="gold-text">/&gt;</span>
+            </div>
+            <div class="loader-bar-container">
+                <div class="loader-bar"></div>
+            </div>
+            <p class="loader-text">Securing connection...</p>
+        </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <header class="navbar-header">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo" id="nav-logo-link">
+                <span class="logo-symbol">&lt;</span>Krishna Priya K<span class="logo-symbol">/&gt;</span>
+            </a>
+            
+            <!-- Desktop Navigation Links -->
+            <nav class="nav-menu" id="nav-desktop-menu">
+                <a href="#home" class="nav-link active" id="nav-link-home">Home</a>
+                <a href="#about" class="nav-link" id="nav-link-about">About</a>
+                <a href="#interests" class="nav-link" id="nav-link-interests">Interests</a>
+                <a href="#skills" class="nav-link" id="nav-link-skills">Skills</a>
+                <a href="#projects" class="nav-link" id="nav-link-projects">Projects</a>
+                <a href="#timeline" class="nav-link" id="nav-link-timeline">Achievements</a>
+                <a href="#github" class="nav-link" id="nav-link-github">GitHub</a>
+                <a href="#contact" class="nav-link" id="nav-link-contact">Contact</a>
+            </nav>
+
+            <!-- Mobile Hamburger Menu Button -->
+            <button class="mobile-menu-toggle" id="menu-toggle-btn" aria-label="Toggle Navigation Menu">
+                <i data-lucide="menu" class="icon-hamburger"></i>
+                <i data-lucide="x" class="icon-close hidden"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Drawer Menu -->
+    <div class="mobile-drawer" id="mobile-navigation-drawer">
+        <nav class="mobile-drawer-nav">
+            <a href="#home" class="mobile-nav-link" id="mob-link-home">Home</a>
+            <a href="#about" class="mobile-nav-link" id="mob-link-about">About</a>
+            <a href="#interests" class="mobile-nav-link" id="mob-link-interests">Interests</a>
+            <a href="#skills" class="mobile-nav-link" id="mob-link-skills">Skills</a>
+            <a href="#projects" class="mobile-nav-link" id="mob-link-projects">Projects</a>
+            <a href="#timeline" class="mobile-nav-link" id="mob-link-timeline">Achievements</a>
+            <a href="#github" class="mobile-nav-link" id="mob-link-github">GitHub</a>
+            <a href="#contact" class="mobile-nav-link" id="mob-link-contact">Contact</a>
+        </nav>
+    </div>
+
+    <!-- Main Container -->
+    <main>
+
+        <!-- Hero Section -->
+        <section id="home" class="hero-section">
+            <div class="hero-content container">
+                <div class="hero-tagline animate-fade-in">
+                    <span class="gold-badge"><i data-lucide="shield-check" class="badge-icon"></i> Cybersecurity Aspirant</span>
+                </div>
+                <h1 class="hero-title animate-fade-in">
+                    <span class="greeting">Hi, I am</span>
+                    <span class="name gold-gradient-text">Krishna Priya K</span>
+                </h1>
+                <h2 class="hero-subtitle animate-fade-in">
+                    <span id="typed-text" class="typed-text-span"></span><span class="typed-cursor">|</span>
+                </h2>
+                <p class="hero-description animate-fade-in">
+                    Passionate Computer Science Engineering student focused on Cybersecurity, Software Development, and AI-driven solutions. Dedicated to building impactful projects, solving real-world problems, and continuously learning emerging technologies.
+                </p>
+                <div class="hero-buttons animate-fade-in">
+                    <a href="#projects" class="btn btn-primary" id="hero-btn-projects">
+                        <i data-lucide="folder-code"></i> View Projects
+                    </a>
+                    <a href="#contact" class="btn btn-outline" id="hero-btn-contact">
+                        <i data-lucide="mail"></i> Contact Me
+                    </a>
+                    <button class="btn btn-outline btn-gold" id="hero-btn-resume">
+                        <i data-lucide="download"></i> Download Resume
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Floating Scroll Indicator -->
+            <div class="scroll-indicator">
+                <a href="#about" aria-label="Scroll to About Me section">
+                    <div class="mouse-scroll">
+                        <span class="wheel"></span>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- About Me Section -->
+        <section id="about" class="about-section section-padding">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-tag gold-text">01. Identity</span>
+                    <h2 class="section-title">About Me</h2>
+                    <div class="section-underline"></div>
+                </div>
+
+                <div class="about-grid">
+                    <div class="about-image-wrapper reveal-left">
+                        <div class="photo-card glass-card">
+                            <img src="profile.png" alt="Krishna Priya K" class="profile-image">
+                            <!-- A premium card styling with absolute decorative gold borders -->
+                            <div class="card-border-decoration top-left"></div>
+                            <div class="card-border-decoration bottom-right"></div>
+                        </div>
+                    </div>
+
+                    <div class="about-text-content reveal-right">
+                        <h3 class="about-tagline">B.Tech CSE Student at Government Engineering College Sreekrishnapuram, Palakkad</h3>
+                        <p class="academic-cohort"><i data-lucide="calendar" class="info-icon"></i> Expected Graduation: <strong>2027</strong></p>
+                        
+                        <p class="about-bio">
+                            I am a dedicated Computer Science student with a keen interest in securing computing environments, building robust applications, and leveraging AI models. 
+                            My academic journey at GEC Sreekrishnapuram has provided me with a solid foundation in computational principles, while my self-driven projects have honed my practical software design capabilities.
+                        </p>
+
+                        <div class="highlight-attributes">
+                            <div class="attribute-item">
+                                <i data-lucide="shield" class="attribute-icon"></i>
+                                <span>Interested in Cybersecurity, Web Dev, AI, and Open Source</span>
+                            </div>
+                            <div class="attribute-item">
+                                <i data-lucide="brain-circuit" class="attribute-icon"></i>
+                                <span>Strong problem-solving and analytical thinking skills</span>
+                            </div>
+                            <div class="attribute-item">
+                                <i data-lucide="server" class="attribute-icon"></i>
+                                <span>Passionate about building secure and scalable applications</span>
+                            </div>
+                        </div>
+
+                        <!-- Mini stats grid inside About -->
+                        <div class="about-stats-grid">
+                            <div class="stat-box glass-card">
+                                <span class="stat-number gold-text">4+</span>
+                                <span class="stat-label">Key Projects</span>
+                            </div>
+                            <div class="stat-box glass-card">
+                                <span class="stat-number gold-text">2027</span>
+                                <span class="stat-label">Graduation Year</span>
+                            </div>
+                            <div class="stat-box glass-card">
+                                <span class="stat-number gold-text">15+</span>
+                                <span class="stat-label">Tech Skills</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Areas of Interest Section -->
+        <section id="interests" class="interests-section section-padding secondary-bg">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-tag gold-text">02. Specializations</span>
+                    <h2 class="section-title">Areas of Interest</h2>
+                    <div class="section-underline"></div>
+                </div>
+
+                <div class="interests-grid">
+                    <!-- Card 1: Cybersecurity -->
+                    <div class="interest-card glass-card reveal">
+                        <div class="interest-icon-wrapper">
+                            <i data-lucide="lock" class="interest-icon gold-text"></i>
+                        </div>
+                        <h3 class="interest-title">Cybersecurity</h3>
+                        <p class="interest-description">Focusing on threat modeling, network security, penetration testing concepts, and secure coding practices to prevent vulnerabilities.</p>
+                        <div class="card-glow"></div>
+                    </div>
+
+                    <!-- Card 2: Software Development -->
+                    <div class="interest-card glass-card reveal" style="animation-delay: 0.1s;">
+                        <div class="interest-icon-wrapper">
+                            <i data-lucide="code-2" class="interest-icon gold-text"></i>
+                        </div>
+                        <h3 class="interest-title">Software Development</h3>
+                        <p class="interest-description">Creating structured desktop and backend architectures using object-oriented systems (OOP) like Java, Python, and robust database layers.</p>
+                        <div class="card-glow"></div>
+                    </div>
+
+                    <!-- Card 3: Web Development -->
+                    <div class="interest-card glass-card reveal" style="animation-delay: 0.2s;">
+                        <div class="interest-icon-wrapper">
+                            <i data-lucide="layout" class="interest-icon gold-text"></i>
+                        </div>
+                        <h3 class="interest-title">Web Development</h3>
+                        <p class="interest-description">Engineering responsive, user-friendly, and interactive client-side interfaces coupled with secure PHP and database endpoints.</p>
+                        <div class="card-glow"></div>
+                    </div>
+
+                    <!-- Card 4: Computer Networks -->
+                    <div class="interest-card glass-card reveal" style="animation-delay: 0.3s;">
+                        <div class="interest-icon-wrapper">
+                            <i data-lucide="network" class="interest-icon gold-text"></i>
+                        </div>
+                        <h3 class="interest-title">Computer Networks</h3>
+                        <p class="interest-description">Studying OSI model communication layers, routing algorithms, protocol functionality, and client-server socket communication architectures.</p>
+                        <div class="card-glow"></div>
+                    </div>
+
+                    <!-- Card 5: Artificial Intelligence -->
+                    <div class="interest-card glass-card reveal" style="animation-delay: 0.4s;">
+                        <div class="interest-icon-wrapper">
+                            <i data-lucide="cpu" class="interest-icon gold-text"></i>
+                        </div>
+                        <h3 class="interest-title">Artificial Intelligence</h3>
+                        <p class="interest-description">Exploring core machine learning methods, data analysis scripts, and integrating intelligent APIs to build automation products.</p>
+                        <div class="card-glow"></div>
+                    </div>
+
+                    <!-- Card 6: Open Source Technologies -->
+                    <div class="interest-card glass-card reveal" style="animation-delay: 0.5s;">
+                        <div class="interest-icon-wrapper">
+                            <i data-lucide="git-branch" class="interest-icon gold-text"></i>
+                        </div>
+                        <h3 class="interest-title">Open Source</h3>
+                        <p class="interest-description">Contributing to collaborative version-controlled environments, sharing code, and utilizing packages created by the community.</p>
+                        <div class="card-glow"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills-section section-padding">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-tag gold-text">03. Capabilities</span>
+                    <h2 class="section-title">Technical Skills</h2>
+                    <div class="section-underline"></div>
+                </div>
+
+                <div class="skills-grid">
+                    <!-- Card: Programming languages -->
+                    <div class="skills-category-card glass-card reveal-left">
+                        <div class="category-header">
+                            <i data-lucide="terminal" class="category-icon gold-text"></i>
+                            <h3>Programming Languages</h3>
+                        </div>
+                        <div class="skills-list">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Java</span>
+                                    <span class="skill-percent">85%</span>
+                                </div>
+                                <div class="skill-track">
+                                    <div class="skill-fill" data-progress="85%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Python</span>
+                                    <span class="skill-percent">80%</span>
+                                </div>
+                                <div class="skill-track">
+                                    <div class="skill-fill" data-progress="80%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">C Programming</span>
+                                    <span class="skill-percent">75%</span>
+                                </div>
+                                <div class="skill-track">
+                                    <div class="skill-fill" data-progress="75%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card: Web Technologies -->
+                    <div class="skills-category-card glass-card reveal-right">
+                        <div class="category-header">
+                            <i data-lucide="globe" class="category-icon gold-text"></i>
+                            <h3>Web Technologies</h3>
+                        </div>
+                        <div class="skills-list">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">HTML5 / CSS3</span>
+                                    <span class="skill-percent">90%</span>
+                                </div>
+                                <div class="skill-track">
+                                    <div class="skill-fill" data-progress="90%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">JavaScript (ES6+)</span>
+                                    <span class="skill-percent">80%</span>
+                                </div>
+                                <div class="skill-track">
+                                    <div class="skill-fill" data-progress="80%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">PHP / Backend Basics</span>
+                                    <span class="skill-percent">70%</span>
+                                </div>
+                                <div class="skill-track">
+                                    <div class="skill-fill" data-progress="70%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card: Databases & Tools -->
+                    <div class="skills-category-card glass-card reveal-left">
+                        <div class="category-header">
+                            <i data-lucide="database" class="category-icon gold-text"></i>
+                            <h3>Database & Tools</h3>
+                        </div>
+                        <div class="skills-list">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">MySQL & DBMS</span>
+                                    <span class="skill-percent">80%</span>
+                                </div>
+                                <div class="skill-track">
+                                    <div class="skill-fill" data-progress="80%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Git & GitHub</span>
+                                    <span class="skill-percent">85%</span>
+                                </div>
+                                <div class="skill-track">
+                                    <div class="skill-fill" data-progress="85%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">VS Code / IDEs</span>
+                                    <span class="skill-percent">90%</span>
+                                </div>
+                                <div class="skill-track">
+                                    <div class="skill-fill" data-progress="90%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card: Core Concepts -->
+                    <div class="skills-category-card glass-card reveal-right">
+                        <div class="category-header">
+                            <i data-lucide="binary" class="category-icon gold-text"></i>
+                            <h3>Computer Science Concepts</h3>
+                        </div>
+                        <div class="skills-list">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Data Structures & Algorithms</span>
+                                    <span class="skill-percent">80%</span>
+                                </div>
+                                <div class="skill-track">
+                                    <div class="skill-fill" data-progress="80%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Object-Oriented Programming (OOP)</span>
+                                    <span class="skill-percent">85%</span>
+                                </div>
+                                <div class="skill-track">
+                                    <div class="skill-fill" data-progress="85%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Computer Networks</span>
+                                    <span class="skill-percent">75%</span>
+                                </div>
+                                <div class="skill-track">
+                                    <div class="skill-fill" data-progress="75%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Cybersecurity Fundamentals</span>
+                                    <span class="skill-percent">80%</span>
+                                </div>
+                                <div class="skill-track">
+                                    <div class="skill-fill" data-progress="80%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects-section section-padding secondary-bg">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-tag gold-text">04. Works</span>
+                    <h2 class="section-title">Featured Projects</h2>
+                    <div class="section-underline"></div>
+                </div>
+
+                <!-- Category Filters -->
+                <div class="projects-filter-container reveal">
+                    <button class="filter-btn active" data-filter="all" id="filter-btn-all">All Projects</button>
+                    <button class="filter-btn" data-filter="java" id="filter-btn-java">Java / OOP</button>
+                    <button class="filter-btn" data-filter="web" id="filter-btn-web">Web Applications</button>
+                    <button class="filter-btn" data-filter="database" id="filter-btn-db">MySQL / DBMS</button>
+                </div>
+
+                <!-- Projects Grid -->
+                <div class="projects-grid">
+                    <!-- Project 1: Banking System -->
+                    <div class="project-card glass-card reveal" data-categories="java database">
+                        <div class="project-header">
+                            <i data-lucide="landmark" class="project-main-icon gold-text"></i>
+                            <div class="project-links">
+                                <a href="https://github.com/krishna-priyak/Banking-System-Project" target="_blank" rel="noopener noreferrer" aria-label="GitHub Repository" class="project-link-icon">
+                                    <i data-lucide="github"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <h3 class="project-title">Banking System</h3>
+                        <p class="project-description">
+                            Developed a secure Java-based banking application featuring password hashing, prepared database statements to prevent SQL injection (SQLi), and structured transactional access control using OOP.
+                        </p>
+                        <div class="project-tech-tags">
+                            <span class="tech-tag">Java</span>
+                            <span class="tech-tag">MySQL</span>
+                            <span class="tech-tag">OOP</span>
+                            <span class="tech-tag">Database Layer</span>
+                        </div>
+                    </div>
+
+                    <!-- Project 2: NASA Space Apps Challenge 2024 -->
+                    <div class="project-card glass-card reveal" data-categories="web">
+                        <div class="project-header">
+                            <i data-lucide="orbit" class="project-main-icon gold-text"></i>
+                            <div class="project-links">
+                                <a href="https://github.com/krishna-priyak" target="_blank" rel="noopener noreferrer" aria-label="GitHub Repository" class="project-link-icon">
+                                    <i data-lucide="github"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <h3 class="project-title">NASA Space Apps Challenge</h3>
+                        <p class="project-description">
+                            Participated as a team member in NASA Space Apps Challenge 2024 and collaborated on innovative solutions using technology and creativity to address real-world challenges.
+                        </p>
+                        <div class="project-tech-tags">
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                        </div>
+                    </div>
+
+                    <!-- Project 3: StaySync -->
+                    <div class="project-card glass-card reveal" data-categories="web database">
+                        <div class="project-header">
+                            <i data-lucide="home" class="project-main-icon gold-text"></i>
+                            <div class="project-links">
+                                <a href="https://github.com/krishna-priyak" target="_blank" rel="noopener noreferrer" aria-label="GitHub Repository" class="project-link-icon">
+                                    <i data-lucide="github"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <h3 class="project-title">StaySync</h3>
+                        <p class="project-description">
+                           StaySync is a Flutter and Firebase-based hostel management application developed exclusively for the students of Government Engineering College Sreekrishnapuram, enabling efficient hostel discovery, communication, and administration through role-based access for guests, students, and hostel administrators.
+                        </p>
+                        <div class="project-tech-tags">
+                            <span class="tech-tag">Flutter</span>
+                            <span class="tech-tag">Firebase</span>
+                            
+                        </div>
+                    </div>
+
+                    <!-- Project 4: EcoSnap -->
+                    <div class="project-card glass-card reveal" data-categories="web database">
+                        <div class="project-header">
+                            <i data-lucide="leaf" class="project-main-icon gold-text"></i>
+                            <div class="project-links">
+                                <a href="https://github.com/krishna-priyak" target="_blank" rel="noopener noreferrer" aria-label="GitHub Repository" class="project-link-icon">
+                                    <i data-lucide="github"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <h3 class="project-title">EcoSnap</h3>
+                        <p class="project-description">
+                            Sustainability-focused platform encouraging eco-friendly practices through media sharing, action tracking, and promoting environmental actions within a gamified community.
+                        </p>
+                        <div class="project-tech-tags">
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">MySQL</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience & Achievements Section -->
+        <section id="timeline" class="timeline-section section-padding">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-tag gold-text">05. Timeline</span>
+                    <h2 class="section-title">Experience & Achievements</h2>
+                    <div class="section-underline"></div>
+                </div>
+
+                <div class="timeline-container">
+                    <!-- Timeline Line -->
+                    <div class="timeline-line"></div>
+
+                    <!-- Item 1: NASA Space Apps Challenge -->
+                    <div class="timeline-item reveal">
+                        <div class="timeline-marker">
+                            <i data-lucide="award" class="marker-icon"></i>
+                        </div>
+                        <div class="timeline-content glass-card">
+                            <span class="timeline-date gold-text">October 2024</span>
+                            <h3 class="timeline-title">NASA Space Apps Challenge 2024</h3>
+                            <h4 class="timeline-subtitle">Global Hackathon Participant</h4>
+                            <p class="timeline-desc">
+                                Collaborated in a cross-functional student group to engineer and pitch data-driven solutions responding to actual planetary problems, using space-agency APIs and frontend frameworks.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Item 2: Certifications 
+                    <div class="timeline-item reveal">
+                        <div class="timeline-marker">
+                            <i data-lucide="shield" class="marker-icon"></i>
+                        </div>
+                        <div class="timeline-content glass-card">
+                            <span class="timeline-date gold-text">Ongoing</span>
+                            <h3 class="timeline-title">Cybersecurity Foundations</h3>
+                            <h4 class="timeline-subtitle">Professional Certification Tracks</h4>
+                            <p class="timeline-desc">
+                                Actively learning cybersecurity principles, including threat mitigation, cryptographic algorithms, network packet analysis using Wireshark, and vulnerability assessment techniques.
+                            </p>
+                        </div>
+                    </div>
+                    -->
+
+                    <!-- Item 3: Workshops -->
+                    <div class="timeline-item reveal">
+                        <div class="timeline-marker">
+                            <i data-lucide="presentation" class="marker-icon"></i>
+                        </div>
+                        <div class="timeline-content glass-card">
+                            <span class="timeline-date gold-text">2023 - 2024</span>
+                            <h3 class="timeline-title">Technical Workshops & Training</h3>
+                            <h4 class="timeline-subtitle">Web Architecture & DBMS</h4>
+                            <p class="timeline-desc">
+                                Attended college training sequences focused on relational database query optimizations, OOP practices in desktop software architectures, and modern Git workflows.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Item 4: Future placeholder 
+                    <div class="timeline-item reveal placeholder-timeline-item">
+                        <div class="timeline-marker">
+                            <i data-lucide="hourglass" class="marker-icon"></i>
+                        </div>
+                        <div class="timeline-content glass-card">
+                            <span class="timeline-date gold-text">Upcoming</span>
+                            <h3 class="timeline-title">More Achievements</h3>
+                            <h4 class="timeline-subtitle">Technical Competitions & Research</h4>
+                            <p class="timeline-desc">
+                                Future hackathons, research initiatives, and professional certification credentials will be displayed here as my academic career progresses.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        -->
+
+        <!-- GitHub Integration Section -->
+        <section id="github" class="github-section section-padding secondary-bg">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-tag gold-text">06. Code Activity</span>
+                    <h2 class="section-title">GitHub Showcase</h2>
+                    <div class="section-underline"></div>
+                </div>
+
+                <div class="github-layout">
+                    <!-- Left: Profile Stat Card -->
+                    <div class="github-stats-column reveal-left">
+                        <div class="profile-summary-card glass-card">
+                            <div class="profile-header">
+                                <img src="https://github.com/krishna-priyak.png" alt="Krishna Priya K Avatar" class="github-avatar" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 100 100\'><rect width=\'100\' height=\'100\' fill=\'%23111827\'/><circle cx=\'50\' cy=\'50\' r=\'40\' fill=\'none\' stroke=\'%236366f1\' stroke-width=\'2\'/><text x=\'50\' y=\'57\' font-family=\'sans-serif\' font-size=\'24\' font-weight=\'bold\' fill=\'%236366f1\' text-anchor=\'middle\'>KP</text></svg>\''">
+                                <div class="profile-meta">
+                                    <h3 class="profile-name">Krishna Priya K</h3>
+                                    <a href="https://github.com/krishna-priyak" target="_blank" rel="noopener noreferrer" class="profile-username">@krishna-priyak</a>
+                                </div>
+                            </div>
+                            
+                            <div class="profile-counters">
+                                <div class="counter-item">
+                                    <span class="counter-val" id="github-repo-count">--</span>
+                                    <span class="counter-lbl">Public Repos</span>
+                                </div>
+                                <div class="counter-item">
+                                    <span class="counter-val" id="github-followers-count">--</span>
+                                    <span class="counter-lbl">Followers</span>
+                                </div>
+                                <div class="counter-item">
+                                    <span class="counter-val" id="github-following-count">--</span>
+                                    <span class="counter-lbl">Following</span>
+                                </div>
+                            </div>
+
+                            <div class="github-academic-badge">
+                                <i data-lucide="github" class="badge-git-icon"></i>
+                                <span>Active Student Developer</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Dynamic Repo Lists -->
+                    <div class="github-repos-column reveal-right">
+                        <h3 class="github-sub-title"><i data-lucide="git-fork" class="sub-icon gold-text"></i> Latest Repositories</h3>
+                        
+                        <div class="dynamic-repos-grid" id="github-repos-container">
+                            <!-- Preloader states for repositories -->
+                            <div class="repo-loading-card glass-card">
+                                <div class="skeleton-line title"></div>
+                                <div class="skeleton-line desc"></div>
+                                <div class="skeleton-line footer"></div>
+                            </div>
+                            <div class="repo-loading-card glass-card">
+                                <div class="skeleton-line title"></div>
+                                <div class="skeleton-line desc"></div>
+                                <div class="skeleton-line footer"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bottom: Contribution Graph -->
+                <div class="github-contribution-wrapper glass-card reveal">
+                    <h3 class="contribution-title"><i data-lucide="calendar" class="contribution-icon gold-text"></i> Contribution Heatmap</h3>
+                    <div class="contribution-graph-container">
+                        <!-- Contribution Chart Widget -->
+                        <img src="https://ghchart.rshah.org/6366f1/krishna-priyak" alt="Krishna Priya K's GitHub Contribution Chart" class="contribution-chart-img" loading="lazy" onerror="this.style.display='none'; document.getElementById('contrib-fallback').style.display='block'">
+                        <div id="contrib-fallback" style="display:none; padding:20px; color:var(--text-muted); font-size:0.88rem;">Contribution data is loading. <a href="https://github.com/krishna-priyak" target="_blank" style="color:var(--color-gold);">View on GitHub →</a></div>
+                    </div>
+                    <p class="contribution-caption">Data fetched in real-time from GitHub contribution activity.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section section-padding">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-tag gold-text">07. Connect</span>
+                    <h2 class="section-title">Contact Me</h2>
+                    <div class="section-underline"></div>
+                </div>
+
+                <div class="contact-grid">
+                    <!-- Left: Info Cards -->
+                    <div class="contact-info-panel reveal-left">
+                        <div class="contact-intro">
+                            <h3>Let's collaborate!</h3>
+                            <p>Feel free to reach out to me for internship openings, project collaborations, cybersecurity discussions, or simply to connect.</p>
+                        </div>
+
+                        <div class="info-link-list">
+                            <!-- Location -->
+                            <div class="info-card glass-card">
+                                <div class="info-card-icon-box">
+                                    <i data-lucide="map-pin" class="info-card-icon gold-text"></i>
+                                </div>
+                                <div class="info-card-details">
+                                    <span class="detail-label">Location</span>
+                                    <span class="detail-val">Kerala, India</span>
+                                </div>
+                            </div>
+
+                            <!-- Email -->
+                            <a href="mailto:krishnapriyak747@gmail.com" class="info-card glass-card interactive-card">
+                                <div class="info-card-icon-box">
+                                    <i data-lucide="mail" class="info-card-icon gold-text"></i>
+                                </div>
+                                <div class="info-card-details">
+                                    <span class="detail-label">Email Address</span>
+                                    <span class="detail-val">krishnapriyak747@gmail.com</span>
+                                </div>
+                                <i data-lucide="arrow-up-right" class="card-arrow gold-text"></i>
+                            </a>
+
+                            <!-- GitHub Link -->
+                            <a href="https://github.com/krishna-priyak" target="_blank" rel="noopener noreferrer" class="info-card glass-card interactive-card">
+                                <div class="info-card-icon-box">
+                                    <i data-lucide="github" class="info-card-icon gold-text"></i>
+                                </div>
+                                <div class="info-card-details">
+                                    <span class="detail-label">GitHub</span>
+                                    <span class="detail-val">github.com/krishna-priyak</span>
+                                </div>
+                                <i data-lucide="arrow-up-right" class="card-arrow gold-text"></i>
+                            </a>
+
+                            <!-- LinkedIn Link -->
+                            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="info-card glass-card interactive-card" id="contact-linkedin-link">
+                                <div class="info-card-icon-box">
+                                    <i data-lucide="linkedin" class="info-card-icon gold-text"></i>
+                                </div>
+                                <div class="info-card-details">
+                                    <span class="detail-label">LinkedIn</span>
+                                    <span class="detail-val">Connect on LinkedIn</span>
+                                </div>
+                                <i data-lucide="arrow-up-right" class="card-arrow gold-text"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Right: Contact Form -->
+                    <div class="contact-form-panel reveal-right">
+                        <form id="contact-message-form" class="glass-card contact-form">
+                            <div class="form-title-wrapper">
+                                <h3>Send a Secure Message</h3>
+                                <div class="secure-badge"><i data-lucide="lock" class="form-badge-icon"></i> End-to-end simulated encryption</div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="form-name">Name</label>
+                                <input type="text" id="form-name" placeholder="John Doe" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="form-email">Email</label>
+                                <input type="email" id="form-email" placeholder="john@example.com" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="form-subject">Subject</label>
+                                <input type="text" id="form-subject" placeholder="Project Collaboration Request" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="form-message">Message</label>
+                                <textarea id="form-message" rows="5" placeholder="Write your message details..." required></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-submit-form" id="form-submit-btn">
+                                <i data-lucide="send"></i> Dispatch Message
+                            </button>
+                            
+                            <div id="form-status-msg" class="form-status hidden"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer-block">
+        <div class="container footer-container">
+            <div class="footer-top">
+                <div class="footer-logo">
+                    <span class="gold-text">&lt;</span>Krishna Priya K<span class="gold-text">/&gt;</span>
+                </div>
+                <p class="footer-quote">"Building secure technology for tomorrow."</p>
+                
+                <!-- Social links -->
+                <div class="footer-socials">
+                    <a href="https://github.com/krishna-priyak" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile" class="social-circle-link">
+                        <i data-lucide="github"></i>
+                    </a>
+                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile" class="social-circle-link" id="footer-linkedin-link">
+                        <i data-lucide="linkedin"></i>
+                    </a>
+                    <a href="mailto:krishnapriyak747@gmail.com" aria-label="Email Me" class="social-circle-link">
+                        <i data-lucide="mail"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p class="copyright-text">&copy; 2026 Krishna Priya K. All rights reserved. Designed with premium glassmorphism.</p>
+                <a href="#home" class="scroll-to-top" aria-label="Scroll to top of the page">
+                    <i data-lucide="chevron-up"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lucide Library Init and Custom Script -->
+    <script src="script.js"></script>
+</body>
+</html>
